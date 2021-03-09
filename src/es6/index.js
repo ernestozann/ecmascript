@@ -82,11 +82,11 @@ let listOfNames = names.map(function (item) {
 let listOfNames2 = names.map(item => console.log(item.name));
 
 const listOfNames3 = (name, age, country) => {
-    ...
+    //...
 }
 
 const listOfNames4 = name => {
-    ...
+    //...
 }
 
 const square = num => num * num;
@@ -104,3 +104,36 @@ const helloPromise = () => {
 helloPromise()
     .then(response => console.log(response))
     .catch(error => console.log(error));
+
+class calculator {
+    constructor() {
+        this.valueA = 0;
+        this.ValueB = 0;
+    }
+    sum(valueA, ValueB){
+        this.valueA = valueA;
+        this.ValueB = ValueB;
+        return this.valueA + this.ValueB;
+    }
+}
+
+const calc = new calculator();
+console.log(calc.sum(2, 2));
+
+import { hello } from './module'
+
+hello();
+
+function* helloWorld() {
+    if(true) {
+        yield 'Hello, ';
+    }
+    if(true){
+        yield 'World';
+    }
+};
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
